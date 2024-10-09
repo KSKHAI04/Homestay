@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="thatplace, Cheap, Malaysia, Homestay" />
+    <link href="tpl_reset.css" rel="stylesheet">
+    <link href="tpl_base.css" rel="stylesheet">
+    <link href="tpl_unitlayout.css" rel="stylesheet">
+    <title>That place la....</title>
+    <script>
+      //JS Script by TAN JIN YUAN
+      
+      //Checks whether user is logged in
+      window.onload = function() {
+      var accLink = document.getElementById("login");
+
+      if(localStorage.getItem('InOrNot') !== null ){
+          accLink.setAttribute("href", "myaccount.html"); //Pressing my account redirects to account page
+      }
+      else{
+          accLink.setAttribute("href", "tpl_login.html");// pressing my account redirects to login page
+      }
+      }
+  </script>
+</head>
+<body>
+    <header>
+        <div id="logo_index">
+          <a href="tpl_homepage.html"><img src="thatplacela_logo.png" alt="That place la..." title="That place laa.." height="180" ></a>
+          <nav>
+              <ul>
+                <li><span><a href="tpl_faq.html" style="text-decoration:none">FAQ</a></span></li>
+                <li><span><a href="tpl_aboutus.html" style="text-decoration:none">ABOUT US</a></span></li>
+                <li><span><a href="tpl_ourrooms.html" style="text-decoration:none">OUR ROOMS</a></span></li>
+                <li><span><a href="tpl_homepage.html" style="text-decoration:none">HOME</a></span></li>
+                <li><a id="login" href="tpl_login.html" style="text-decoration:none">MY ACCOUNT</a></li>
+              </ul>
+            </nav>
+        </div>
+    </header>
+          <section class="baselayout">
+            <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+            <div class="chat-popup" id="myChat">
+            <iframe width="350" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+            </iframe>
+            <button type="button" class="btncancel" onclick="closeForm()">&#9747</button>
+            </div>
+            <script>
+            function openForm() {
+              document.getElementById("myChat").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myChat").style.display = "none";
+            }    
+        </script>
+          <h1 class="room">PLATINUM VICTORY 36</h1>
+          <div class="price">
+            <s style="font-size: 20px;color: rgb(162, 162, 162);">RM200</s>
+            <span>RM155</span>
+          </div>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="unit photo/unit 6.a.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="unit photo/unit 6.b.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="unit photo/unit 6.c.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="unit photo/unit 6.d.jpg" style="width:100%">
+              </div>
+            
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="unit photo/unit 6.e.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="unit photo/unit 6.f.jpg" style="width:100%">
+              </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+             <div class="btn">
+              <a href="tpl_booking.html"><span>BOOK NOW</span></a>
+              <br/>  
+            </div>
+
+        <div class="maincontain">
+          <div class="content" id="fac">
+           <h3>FACILITIES</h3>
+        <dl>
+          <dl>
+          <div class="description">
+          <dt class="Tdescription">Bathroom</dt>
+        <ul>
+          <li>Hair Dryer</li>
+          <li>Shampoo</li>
+          <li>Body Soap</li>
+          <li>Bidet</li>
+        </ul> 
+      <br/>
+          <dt class="Tdescription">Bedroom and Laudry</dt>
+          <ul>
+            <li>Essentials</li>
+            <li>Hangers</li>
+            <li>Bed Lines</li>
+            <li>Iron</li>
+          </ul>
+        <br/>
+          <dt class="Tdescription">Entertainment</dt>
+          <ul>
+            <li>40"HDTV with Chromecast</li>
+          </ul>
+        <br/>
+          <dt class="Tdescription">Heating and Cooling</dt>
+        <ul>
+          <li>Air Conditioning</li>
+          <li>Ceiling Fan</li>
+        </ul>
+      <br/>
+          <dt class="Tdescription">Internet</dt>
+        <ul>
+          <li>Fast Wifi - 300mbps</li>
+        </ul>
+      <br/>
+          <dt class="Tdescription">Kitchen and Dining</dt>
+        <ul>
+          <li>Kitchen</li>
+          <li>Midea Refrigerator</li>
+          <li>Microwave</li>
+          <li>Cooking Basics</li>
+          <li>Dishes and Silverware</li>
+         <li>Electirc Stove</li>
+          <li>Hot Water Kettle</li>
+          <li>Dining Table</li>
+        </ul>
+      <br/>
+        <dt class="Tdescription">Parking annd Facilities</dt>
+        <ul>
+          <li>Free driveway parking on premises-1 space</li>
+          <li>Free street parking</li>
+          <li>Share pool - available all year</li>
+          <li>Gym room</li>
+          <li>Elevator</li>
+        </ul>
+          </dl>
+          <br/>
+          </div>
+          <div class="content" id="comment">
+            <h3>OUR REVIEWS</h3>
+            <div class="review">
+                <article>
+                  <li class="user">Muhammad Ali</li>
+                  <p>Rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p> <!--9733 b.STAR   9734 w.STAR-->
+                  <p class="review">"Great Location. Right in the heart of the city. The apartment was clean and comfortable, and the host was helpful.</p>
+                </article>
+            </div>
+            <div class="review">
+              <article>
+                <li class="user">Matcha</li>
+                <p>Rating: &#9733;&#9733;&#9733;&#9734;&#9734;</p> <!--9733 b.STAR   9734 w.STAR-->
+                <p class="review">Unique Experience. Clean and cozy.</p>
+              </article>
+            </div>
+            <div class="review">
+              <article>
+                <li class="user">Mocha</li>
+                <p>Rating: &#9733;&#9734;&#9734;&#9734;&#9734;</p> <!--9733 b.STAR   9734 w.STAR-->
+                <p class="review">Worst Experience Ever. Dirty and rundown. Would not recommend staying here.</p>
+              </article>
+          </div>
+            </div>
+          </div>   
+   </section>
+    <footer>
+      <div>
+        <p>© 2023 Thatplacela. All rights reserved. <br>
+        123, Jalan Harmoni, Taman Ceria Heights, 58000 Kuala Megah, Selangor, Malaysia.
+        </p>
+            <a href="mailto:thatplacela@yahoo.com" style="text-decoration:none">
+                <img src="mail.png" style="margin-right: 40px;"/>
+            </a>
+            
+            <a href="tel: +60123456789" style="text-decoration:none" style="text-decoration:none">
+                <img src="phone.png" style="margin-right: 40px;"/>
+            </a>
+            <a href="https://www.instagram.com" style="text-decoration: none">
+                <img src="ig.png">
+            </a>
+        </div>
+</footer>
+</body>
+</html>

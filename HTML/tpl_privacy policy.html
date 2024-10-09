@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="thatplace, Cheap, Malaysia, Homestay" />
+        <link href="tpl_SRandPP.css" rel="stylesheet"/>
+        <title>Privacy Policy: That place la....</title>
+        <style>
+    article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+
+h3{
+    font-size: 17px;
+    text-align: center;
+}
+
+        
+    </style>
+            <script>
+                //JS Script by TAN JIN YUAN
+                
+                //Checks whether user is logged in
+                window.onload = function() {
+                var accLink = document.getElementById("login");
+    
+                if(localStorage.getItem('InOrNot') !== null ){
+                    accLink.setAttribute("href", "myaccount.html"); //Pressing my account redirects to account page
+                }
+                else{
+                    accLink.setAttribute("href", "tpl_login.html");// pressing my account redirects to login page
+                }
+                }
+    
+            </script> 
+    </head>
+    <body>
+        
+        <!--Chatbot-->
+        <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+        <div class="chat-popup" id="myChat">
+            <iframe width="350" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+            </iframe>
+        <button type="button" class="btncancel" onclick="closeForm()">&#9747;</button>
+        </div>
+        <script>
+            function openForm() {
+              document.getElementById("myChat").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myChat").style.display = "none";
+            }    
+        </script>
+        <!--End Chatbot-->
+        <header>
+            <div id="logo_index">
+                <a href="tpl_homepage.html"><img src="thatplacela_logo.png" alt="That place la..." title="That place laa.." height="180" ></a>
+                <nav>
+                    <ul>
+                        <li><a href="tpl_faq.html" style="text-decoration:none">FAQ</a></li>
+                        <li><a href="tpl_aboutus.html" style="text-decoration:none">ABOUT US</a></li>
+                        <li><a href="tpl_ourrooms.html" style="text-decoration:none">OUR ROOMS</a></li>
+                        <li><a href="tpl_homepage.html" style="text-decoration:none">HOME</a></li>
+                        <li><a id="login" href="myaccount.html" style="text-decoration:none">MY ACCOUNT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <h2><img src="thatplacela - Copy.png" width="20%"><br/>PRIVACY POLICY</h2>
+    
+        <div class="para">
+            <dl class="comment"><dt>Information Collection :</dt>
+                <dd>We collect personal information,including names,contact details,payment information, and preferences, for the purpose of processing reservations and improving our services.</dd>
+                <dd>Guest information is collected directly form guest during the booking process or from third-party booking platforms.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Infomation Usage :</dt>
+                <dd>Guest information is used for the folowing purposes.</dd>
+                <dd>Managing reservations and check-ins/check-outs.</dd>
+                <dd>Communicating with guests about their stay.</dd>
+                <dd>Providing requested services.</dd>
+                <dd>Inproving our services and accommodations.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Information Sharing :</dt>
+                <dd>We do not share personal information with third parties unless required by law.</dd>
+                <dd>Limited information may be shared with service providers(e.g. payment processors)to facilitate transactions.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Payment Security :</dt>
+                <dd>We use secure payment gateways to process credit card transactions and protect guest payment information.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Date retention :</dt>
+                <dd>Guest information is retained for as long as necessary for the purposes for which was collected or as required by law.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Cookie and Analytics :</dt>
+                <dd>We may use cookies and analytics tools on our website to improve user experience and analyze website traffic.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Guest Rights :</dt>
+                <dd>Guest have the right to access,update, or request the deletion of their personal information.Please contact us for any inquiries.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Security :</dt>
+                <dd>We take resonable steps to protect guest information from unauthorized access or disclosure.</dd>
+            </dl>
+        </div>
+        <div class="para">
+            <dl class="comment"><dt>Changes to Policy :</dt>
+                <dd>This privacy policy may be updated periodically.Guest will be notified of any changes.</dd>
+         </dl>
+        </div>
+
+    <footer>
+        <div>
+        <p>© 2023 Thatplacela. All rights reserved. <br>
+        123, Jalan Harmoni, Taman Ceria Heights, 58000 Kuala Megah, Selangor, Malaysia.
+        </p>
+            <a href="mailto:thatplacela@yahoo.com" style="text-decoration:none">
+                <img src="mail.png" style="margin-right: 40px;"/>
+            </a>
+            
+            <a href="tel: +60123456789" style="text-decoration:none" style="text-decoration:none">
+                <img src="phone.png" style="margin-right: 40px;"/>
+            </a>
+            <a href="https://www.instagram.com" style="text-decoration: none">
+                <img src="ig.png">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

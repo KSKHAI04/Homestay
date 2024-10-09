@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    line-height:40px;
+    margin-top: 10px;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+   
+}
+
+body{
+    text-align: center;
+    overflow-y: hidden;
+}
+
+
+section{
+    padding: 10px 20px;
+    background-color: transparent;
+    height: 100vh;
+    background: url("bg19.png") ;
+    background-size: cover;
+}
+
+img{width: 300px;}
+
+#survey{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font: 25px  Verdana, Geneva, Tahoma, sans-serif;;
+    transition: all 0.2s linear;
+}
+
+#survey:hover{
+    background-color: rgb(3, 3, 88);
+    color: white;
+    cursor: pointer;
+}
+.container{
+    margin: 15% auto;
+    padding: 5px 10px;
+    background-color: white;
+}
+

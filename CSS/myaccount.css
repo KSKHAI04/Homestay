@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Montserrat'; 
+    src: url(../Montserrat-VariableFont_wght.ttf) format(truetype);}
+
+section{
+    background-color: white;
+    min-height: 62vh;
+}
+.account-page{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10px;
+    font-size: 15px;
+    background-image: url(whitepattern.png);
+}
+
+.profile{
+    width: 30%;
+}
+
+.detail{
+    width: 60%;
+}
+
+.profile-detail{
+    width: 140px;
+    height: 160px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    text-align: center;
+    overflow: none;
+}
+
+.profile-detail img{
+    width: 100%;
+    height: 140px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px #888;
+    object-fit: cover;
+}
+
+.profile-detail h2{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile ul{
+    list-style: none;
+    padding: 10px;
+}
+
+.profile ul li{
+    margin-bottom: 5px;
+}
+
+.profile ul li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(236, 240, 241, 0.3);
+    text-align: left;
+    padding: 15px 8px;
+    display: block;
+}
+
+span.arrow{
+    float: right;
+}
+
+
+.profile ul li a:hover{
+    background-color: rgb(40, 125, 200);
+    color: white;
+}
+
+.from-inline{
+    position: relative;
+    margin: 30px 0;
+    width: 60%;
+    text-align: right;
+}
+
+#acc, #booking{
+    line-height: normal;
+    font-size: 17px;
+}
+
+div.dtcontent{
+    margin-bottom: 50px;
+}
+
+h2#head{
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0;
+}
+
+#booking  ul {
+    padding: 10px 5px;
+    transition: all 0.3s;
+}
+
+#booking li:hover {
+    color: whitesmoke;
+    background-size: cover;
+    background-color: transparent;
+
+}
+
+#booking a{
+    text-decoration: none;
+    color: black;
+}
+#booking a:hover{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+span#day{
+    font-weight: 1000;
+    font-size: 50px;
+    line-height: normal;
+}
+span#mthY{
+    font-weight:400;
+    line-height: normal;
+}
+
+button.logout{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    border: 1.5px solid black;
+    padding: 0.8em 1.5em;
+    margin: 13px 5px;
+    text-decoration: none;
+    transition: 0.3s linear;
+    color: black;
+    font-size: 15px;
+    display:inline-block;
+    text-align: center;
+    line-height: 130%;
+}
+
+button.logout:hover {
+    color:rgb(43, 144, 226);
+    background-color: black;
+}
+
+p#email{
+    font-size: 12px;;
+}
+
+
+
+#booking li:nth-of-type(1):hover{background-image: url("unit photo/unit\ 1.e.jpg");}
+#booking li:nth-of-type(2):hover{background-image: url("unit photo/unit\ 2.b.jpg");}
+#booking li:nth-of-type(3):hover{background-image: url("unit photo/unit\ 3.a.jpg");}
+#booking li:nth-of-type(4):hover{background-image: url("unit photo/unit\ 4.f.jpg");}
+#booking li:nth-of-type(5):hover{background-image: url("unit photo/unit\ 5.c.jpg");}
+#booking li:nth-of-type(6):hover{background-image: url("unit photo/unit\ 6.d.jpg");}

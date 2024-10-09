@@ -1,0 +1,190 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Montserrat'; 
+    src: url(Montserrat-VariableFont_wght.ttf) format(truetype);}
+
+
+
+    html{
+        font: normal normal 0.5em/1.5em 
+         'Montserrat', Verdana, sans-serif;  
+         background:url(bg11.jpg) repeat scroll center;
+        }
+
+    body{
+        margin: auto;
+        max-width: 1024px;
+        min-width: 768px;
+        background: url(bg2.png);
+        
+        }
+    h2{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    /*Navbar and COMPANY LOGO css */
+    header{
+      background-color: #F1F0E8;
+    }
+    header nav{
+        width: 100%;
+        margin: 0px; 
+    }
+    header ul {
+       background-color: #f0edd7;
+        border: 3px solid rgb(228, 213, 190);
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        overflow: hidden;
+        padding-right: 39px;
+        font: normal ;
+        
+        } 
+
+    header li{
+        float:  right;
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        }
+
+    li a{
+        display: block;
+        color:rgb(7, 23, 116);
+        text-align: center;
+        padding: 20px 15px;
+        transition: 0.3s linear;
+    }
+    li a:hover{
+        background-color: #96B6C5;
+        color: whitesmoke;
+    }
+
+
+    header #logo_index img { 
+        padding: 15px;
+        width: 23%;
+        height: 16%;
+    
+    }
+
+    dd::before{
+        content: "\244";
+        position: absolute;
+        transform: translateX(-20px);
+    }
+
+  
+    /*Footer styles*/ 
+  
+    footer > div{
+        padding: 1%;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 20px;
+        margin: 0px;
+        background-color: #F1F0E8;
+    }
+    
+
+    footer img {
+        width: 2em;
+        height: 2em;
+    }
+
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+
+li, dd{
+    font-size:15px;
+    line-height: 20px;
+    color:black;
+    list-style-position: outside;
+    margin: 5px 10px;
+    
+}
+
+.comment{
+    font-size: 20px;
+    padding:5px;
+    color:black;
+    font-weight: 450;
+    margin: auto;
+    line-height: 30px;
+}
+
+.para{
+    border: solid white;
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px 20px;
+    padding: 20px 35px;
+    transition: all 0.3s;
+    
+}
+
+.para:hover{
+    box-shadow: 10px 10px 8px rgb(57, 57, 57);
+}
+
+
+dt, .title{
+    font-weight: 700;
+    text-shadow: 3px 4px 1px rgb(200, 200, 200);
+}
+
+/* Chatbot styles */
+button.botopen{
+    z-index: 1;
+    opacity: 0.9;
+    border: 1px solid black;
+    background-color: orange;
+    padding: 10px 16px;
+    width: 200px;
+    font: 20px 'Trebuchet MS','Montserrat', Arial, sans-serif;
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+}   
+
+button.botopen:hover{
+    color: white;
+}
+button.botopen:active{
+    color: black;
+    background-color:darkorange;
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border: 2px solid #f1f1f1;
+    z-index: 9;
+    line-height: 0;
+}
+
+
+
+/* Cancel button */
+.btncancel{
+    position:absolute;
+    border: 1px solid black;
+    top:1px;
+    right:1px;
+    }
+.btncancel:hover{
+    background-color:rgb(277,64,45);
+    }

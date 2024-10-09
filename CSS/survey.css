@@ -1,0 +1,100 @@
+h1{
+    font-size: 65px;
+    padding-bottom:0;
+    color:white;
+    text-align: center;
+}
+
+#form{
+    background-color: white;
+    max-width: 900px;
+    width: 90%;
+    margin: 10px auto;
+    text-align: left;
+    padding: 20px ; 
+    border-radius: 20px;
+    border: 2px solid black;
+}
+p{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.decription{
+    text-align: center;
+    line-height: 13px;
+    font-weight: 400;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+div.input{
+    font-size: 13px;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+}
+
+div.content{
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+    background: url("bg2.png");
+    padding: 20px 0px;
+}
+
+#label-services{
+    font-size: 15px;
+}
+
+#label-recommend{
+    font-size: 15px;
+}
+
+#label-place{
+    font-size: 15px;
+}
+
+#label-browse{
+    font-size: 15px;
+}
+
+#label-notice{
+    font-size: 15px;
+}
+
+#label-book{
+    font-size: 15px;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.btn{
+    text-align: center;
+    margin: 5px;
+}
+
+section{
+    height: auto;
+    margin-bottom: 0%;
+}
+
+#survey{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font: 20px  Verdana, Geneva, Tahoma, sans-serif;;
+    transition: all 0.2s linear;
+}
+
+#survey:hover{
+    background-color: rgb(3, 3, 88);
+    color: white;
+    cursor: pointer;
+}

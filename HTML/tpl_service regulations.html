@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="thatplace, Cheap, Malaysia, Homestay" /> 
+        <link href="tpl_SRandPP.css" rel="stylesheet"/>
+        <title>Service Regulations: That place la....</title>
+        <script>
+          //JS Script by TAN JIN YUAN
+          
+          //Checks whether user is logged in
+          window.onload = function() {
+          var accLink = document.getElementById("login");
+
+          if(localStorage.getItem('InOrNot') !== null ){
+              accLink.setAttribute("href", "myaccount.html"); //Pressing my account redirects to account page
+          }
+          else{
+              accLink.setAttribute("href", "tpl_login.html");// pressing my account redirects to login page
+          }
+          }
+
+      </script> 
+    </head>
+<body>
+  
+        <!--Chatbot-->
+        <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+        <div class="chat-popup" id="myChat">
+            <iframe width="350" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+            </iframe>
+        <button type="button" class="btncancel" onclick="closeForm()">&#9747;</button>
+        </div>
+        <script>
+            function openForm() {
+              document.getElementById("myChat").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myChat").style.display = "none";
+            }    
+        </script>
+        <!--End Chatbot-->
+    <header>
+        <div id="logo_index">
+            <a href="tpl_homepage.html"><img src="thatplacela_logo.png" alt="That place la..." title="That place laa.." height="180" ></a>
+            <nav>
+                <ul>
+                    <li><a href="tpl_faq.html" style="text-decoration:none">FAQ</a></li>
+                    <li><a href="tpl_aboutus.html" style="text-decoration:none">ABOUT US</a></li>
+                    <li><a href="tpl_ourrooms.html" style="text-decoration:none">OUR ROOMS</a></li>
+                    <li><a href="tpl_homepage.html" style="text-decoration:none">HOME</a></li>
+                    <li><a id="login" href="tpl_login.html" style="text-decoration:none">MY ACCOUNT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <h2><img src="thatplacela - Copy.png" width="20%"><br/>SERVICE REGULATIONS</h2>
+
+<div class="para">
+<dl class="comment">
+  <dl><span class="title">Reservations and Booking :</span>
+  <dd>Guests are responsible for any damages or losses to the property caused during their stay.</dd>
+  <dd>All reservations require a valid credit card to secure the booking.</dd>
+  <dd>A deposit or pre-authorization on the credit card may be required at the time of booking.</dd>
+  <dd>Payment for the stay is due upon check-in. We accept debit card/Visa/Credit card.</dd>
+  <dd>Cancellation policies and fees apply; please refer to our cancellation policy for details.</dd>
+</dl>
+</div>
+<div class="para">
+<dl class="comment"><dt><span class="title">Check-In and Check-Out :</span></dt>
+  <dd>Check-in time is after 10am and before 2pm.<dd>
+  <dd>Check-out time is before 12pm.</dd>
+  <dd>Early check-ins and late check-outs may be accommodated based on availability and may be subject to additional charges.</dd>
+</dl>
+</div>
+<div class="para">
+<dl class="comment"><dt><span class="title">House Rules and Conduct :</span></dt>
+  <dd>Guests are expected to treat  the homestay guests with respect.</dd>
+  <dd>Quiet hours are observed from 11pm to 8am.</dd>
+  <dd>Smoking is strictil prohibited inside the homestay.</dd>
+  <dd>Parties and events are not allowed unless prior arrangements have been made with the host.</dd>
+</dl>
+</div>
+<div class="para">
+<dl class="comment"><dt><span class="title">Damages and Liabilities :</span></dt>
+  <dd>Guests are responsible for any damages or losses to the property caused during thier stay.</dd>
+  <dd>Charges for damages will be applied to the credit card provided during booking.</dd>
+  <dd>The homestay is not responsible for any loss of personal belongings.</dd>
+</dl>
+</div>
+<div class="para">
+<dl class="comment"><dt><span class="title">Pets : </span></dt>
+  <dd>Pets are allowed on the property unless prior arrangements have been made with the homestay.</dd>
+  <dd>Additional fees and rules may apply for guests traveling with pets.</dd>
+</dl>
+</div>
+<div class="para">
+<dl class="comment"><dt><span class="title">Security and Safety :</span></dt>
+  <dd>The homestay provides basic security measures, but guests are encouraged to take precautions and lock their room when not present.</dd>
+  <dd>Emergency contact information is provided in each room for guest safety.</dd>
+</dl>
+</div>
+
+<footer>
+    <div>
+    <p>© 2023 Thatplacela. All rights reserved. <br>
+    123, Jalan Harmoni, Taman Ceria Heights, 58000 Kuala Megah, Selangor, Malaysia.
+    </p>
+        <a href="mailto:thatplacela@yahoo.com" style="text-decoration:none">
+            <img src="mail.png" style="margin-right: 40px;"/>
+        </a>
+        
+        <a href="tel: 999" style="text-decoration:none" style="text-decoration:none">
+            <img src="phone.png" style="margin-right: 40px;"/>
+        </a>
+        <a href="https://www.instagram.com" style="text-decoration: none">
+            <img src="ig.png">
+        </a>
+    </div>
+</footer>
+</body>
+</html>

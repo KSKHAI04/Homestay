@@ -1,0 +1,120 @@
+<!--TAN JIN YUAN-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="thatplace, Cheap, Malaysia, Homestay" />
+        <link href="tpl_reset.css" rel="stylesheet">
+        <link href="tpl_base.css" rel="stylesheet">
+        <link href="aboutus.css" rel="stylesheet">
+        <title>That place la....</title>
+        <script>
+            //JS Script by TAN JIN YUAN
+            
+            //Checks whether user is logged in
+            window.onload = function() {
+            var accLink = document.getElementById("login");
+            if(localStorage.getItem('InOrNot') !== null ){
+                accLink.setAttribute("href", "myaccount.html"); //Pressing my account redirects to account page
+            }
+            else{
+                accLink.setAttribute("href", "tpl_login.html");// pressing my account redirects to login page
+            }
+            }
+
+        </script>
+    </head>
+<body>
+    <header>
+        <div id="logo_index">
+            <a href="tpl_homepage.html"><img src="thatplacela_logo.png" alt="That place la..." title="That place laa.." height="180" ></a>
+            <nav>
+                <ul>
+                    <li><span><a href="tpl_faq.html" style="text-decoration:none">FAQ</a></span></li>
+                    <li><span><a href="tpl_aboutus.html" style="text-decoration:none">ABOUT US</a></span></li>
+                    <li><span><a href="tpl_ourrooms.html" style="text-decoration:none">OUR ROOMS</a></span></li>
+                    <li><span><a href="tpl_homepage.html" style="text-decoration:none">HOME</a></span></li>
+                    <li><a id="login" href="tpl_login.html" style="text-decoration:none">MY ACCOUNT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="baselayout" id="aboutus">
+                <!--Chatbot-->
+                <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+                <div class="chat-popup" id="myChat">
+                    <iframe width="350" height="440"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+                    </iframe>
+                <button type="button" class="btncancel" onclick="closeForm()">&#9747;</button>
+                </div>
+                <script>
+                    function openForm() {
+                      document.getElementById("myChat").style.display = "block";
+                    }
+                    function closeForm() {
+                      document.getElementById("myChat").style.display = "none";
+                    }    
+                </script>
+                <!--End Chatbot-->
+        <img src="thatplacela_logo2.png" width="30%">
+        <article>
+        <h1>ABOUT OUR COMPANY</h1>
+        <p class="odd">Founded with a passion for immersive travel experiences, "Thatplacela" Homestay Company has a rich history rooted
+             in a love for exploration and cultural connection. Our journey began several years ago when a group of avid travelers
+              came together with a shared vision, to create a platform that goes beyond 
+              conventional tourism and offers a gateway to authentic, local experiences.
+        </p>
+        <p class="even">Guided by this vision, "Thatplacela" was born. From its humble beginnings, our company has grown into a trusted 
+            name in the world of homestay travel. We have taken the road less traveled, seeking out hidden gems and forging 
+            meaningful relationships with local communities along the way.
+        </p>
+        <p class="odd">Over the years, we have evolved and refined our approach, continuously seeking out unique homestays that capture the 
+            heart and soul of each destination. Our dedication to responsible and sustainable tourism has remained unwavering, as we strive 
+            to leave a positive impact on the places we visit.
+        </p>
+        <p class="even">As we look back on our journey, we are proud of the countless travelers who have embarked on their own adventures with 
+            "Thatplacela." Each homestay experience has been a story waiting to be told, a chapter in the book of our history that continues to
+             be written with every new traveler we welcome into our family.
+        </p>
+
+        <p class="odd">
+            Join us on a journey through time and culture, as we invite you to be a part of our story at "Thatplacela" Homestay Company. Experience 
+            the world through the eyes of locals, connect with communities, and create memories that will shape your own personal history of 
+            exploration and discovery.
+        </p>
+        </article>
+        <div id="harold">
+            <img src="harold.png" id="harold" title="harold"/>
+            <div>
+                <p><blockquote>Travel is not just about the places you visit; it's about the stories you collect, 
+                the connections you make, and the moments that shape your perspective. <br/>Through 
+                every homestay experience, we open doors to a world of authenticity and shared 
+                humanity, one enriching chapter at a time.</blockquote> <br/>
+                <em>Harold, Founder of "Thatplacela" Homestay Company</em>
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>© 2023 Thatplacela. All rights reserved. <br>
+            123, Jalan Harmoni, Taman Ceria Heights, 58000 Kuala Megah, Selangor, Malaysia.
+            </p>
+                <a href="mailto:thatplacela@yahoo.com" style="text-decoration:none">
+                    <img src="mail.png" style="margin-right: 40px;"/>
+                </a>
+                
+                <a href="tel: +60123456789" style="text-decoration:none" style="text-decoration:none">
+                    <img src="phone.png" style="margin-right: 40px;"/>
+                </a>
+                <a href="https://www.instagram.com" style="text-decoration: none">
+                    <img src="ig.png">
+                </a>
+        </div>
+</footer>
+</body>
+</html>

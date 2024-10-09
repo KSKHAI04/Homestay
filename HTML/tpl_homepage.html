@@ -1,0 +1,219 @@
+<!--TAN JIN YUAN-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="thatplace, Cheap, Malaysia, Homestay" />
+        <link href="tpl_reset.css" rel="stylesheet">
+        <link href="tpl_base.css" rel="stylesheet">
+        <title>That place la....</title>
+        <style type="text/css">
+            .baselayout{
+                background-image: url(bg.jpg);
+                background-repeat: no-repeat;
+                background-size: 1920px 1080px;
+                text-align: center;
+            }
+
+            #explore{
+                font-family: 'Montserrat', Verdana, sans-serif;
+                background-color: rgb(130, 198, 254);
+                font-size: 20px;
+                border: 0px;
+                border-radius: 3px ;
+                margin: 20px 0px;
+                padding: 15px 20px;
+                transition: 0.1s linear;
+            }
+
+            #explore:hover{
+                background-color: aliceblue;
+            }
+
+            /*Marquee styles*/
+
+            .marqcontainer{
+                justify-content: center;
+                text-align: center;
+                background: rgb(255, 255, 193);
+                margin: 0px auto 10px auto;
+                border: 1px solid beige;
+                padding: 10px;
+                font: italic small-caps 17px 'Montserrat','Verdana', sans-serif;
+                width: 80%;
+                border-radius: 20px;
+                opacity: 0.7;
+            }
+
+            .marquee {
+                height: 30px;	
+                overflow: hidden;
+                position: relative;
+                color: rgb(181, 123, 16);
+            }
+
+            .marquee p {
+                position: absolute;
+                height: 100%;
+                margin: 0;
+                line-height: 20px;
+                text-align: center;
+                transform:translateX(80%);   /* Starting position */
+                /* Apply animation to this element */
+                animation: scroll-left 18s linear infinite;
+                text-overflow: clip;
+                white-space: nowrap;
+                overflow:hidden;
+            }
+
+            .marquee:hover p, .marqcontainer:hover p{
+                animation-play-state: paused;
+            }
+
+            .marqcontainer h3{
+                transition: all 0.3s ease-out;
+            }
+            .marqcontainer:hover h3{
+                transform: scale(1.2,1.2) ;
+            }
+            .marqcontainer a{ 
+                text-decoration: none;
+                font-weight: bold;
+                color: rgb(181, 123, 16);
+            }
+            .marqcontainer a:hover{color: rgb(18, 136, 215);}
+
+            /*Marquee keyframes */
+            @keyframes scroll-left {
+            0%   {
+            transform: translateX(80%); 		
+            }
+            100% {
+            transform: translateX(-100%); 
+            }
+            }
+
+        </style>
+        <script>
+            //JS Script by TAN JIN YUAN
+            
+            //Checks whether user is logged in
+            window.onload = function() {
+            var accLink = document.getElementById("login");
+
+            if(localStorage.getItem('InOrNot') !== null ){
+                accLink.setAttribute("href", "myaccount.html"); //Pressing my account redirects to account page
+            }
+            else{
+                accLink.setAttribute("href", "tpl_login.html");// pressing my account redirects to login page
+            }
+            }
+
+        </script>
+    </head>
+<body>
+    <header>
+        <div id="logo_index">
+            <a href="tpl_homepage.html"><img src="thatplacela_logo.png" alt="That place la..." title="That place laa.." height="180" ></a>
+            <nav>
+                <ul>
+                    <li><a href="tpl_faq.html" style="text-decoration:none">FAQ</a></li>
+                    <li><a href="tpl_aboutus.html" style="text-decoration:none">ABOUT US</a></li>
+                    <li><a href="tpl_ourrooms.html" style="text-decoration:none">OUR ROOMS</a></li>
+                    <li><a href="tpl_homepage.html" style="text-decoration:none">HOME</a></li>
+                    <li><a id="login" href="tpl_login.html" style="text-decoration:none">MY ACCOUNT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="baselayout" id="intro">
+
+        <!--Chatbot-->
+        <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+        <div class="chat-popup" id="myChat">
+            <iframe width="350" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+            </iframe>
+        <button type="button" class="btncancel" onclick="closeForm()">&#9747;</button>
+        </div>
+        <script>
+            function openForm() {
+              document.getElementById("myChat").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myChat").style.display = "none";
+            }    
+        </script>
+        <!--End Chatbot-->
+        
+        <div class="marqcontainer">
+            <h3 style="font-style: normal; font-size: 25px;">Announcements &#x1F4E2;</h3><br/>
+            <div class="marquee">
+              <p><b>BECOME A MEMBER TODAY</b> Enjoy benefits such as free key delivery service
+              and 10% Discount on future bookings when you sign up for free <a href="register.html">here!</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+                 <b>PROMOTION ON SALE</b> Book now before its too late. 
+              </p>
+
+            </div>
+        </div>
+
+
+        <h1>WELCOME</h1>
+        <p>Quality hospitality starts from here, we are committed to 
+            give everyone a pleasureable stay.
+            Immerse yourself in the warmth of local culture 
+            as we curate unique stays that reflect the essence of each location.
+        </p>
+        <br/>
+        <video controls autoplay muted loop width="80%" style="margin: 35px 0px;">
+            <source src="30sec.mp4" type="video/mp4"/>
+            <source src="30sec.webm" type="video/webm"/>
+            <embed src="30sec.webm" type="video/webm"/>
+            Update your browser to HTML5 to play the video.
+        </video>
+        <br/>
+        <p>At "That place la," we understand that a perfect vacation is not just about the destination, it's about the people you meet and the memories you create.
+        </p>
+        </br>
+        <img src="map.png" alt="Map of thatplacela units." title="Click on me to explore rooms." usemap="#unitmap" >
+        <br/>
+        <map name="unitmap">
+            <area alt="Empire residence 1" title="Click on me to explore rooms." href="tpl_unit1.html" coords="10,14,322,323" shape="rect">
+            <area alt="Empire residence 2" title="Click on me to explore rooms." href="tpl_unit2.html" coords="333,173,487,321" shape="rect">
+            <area alt="Empire residence 3" title="Click on me to explore rooms." href="tpl_unit3.html" coords="9,334,158,490" shape="rect">
+            <area alt="PLATNIUM VICTORY 31" title="Click on me to explore rooms." href="tpl_unit4.html" coords="172,336,321,489" shape="rect">
+            <area alt="PLATNIUM VICTORY 34" title="Click on me to explore rooms." href="tpl_unit5.html" coords="336,338,489,487" shape="rect">
+            <area alt="PLATNIUM VICTORY 36" title="Click on me to explore rooms." href="tpl_unit6.html" coords="334,12,488,164" shape="rect">
+        </map>
+        <p style="font-size: small;margin-bottom: 20px;">
+            (Click on the images to explore rooms)
+        </p>
+        <p>
+            Our handpicked selection of homestays offers comfortable accommodations and reasonable prices, complemented by personalized services that cater to your every need.
+        </p>
+        <br/>
+        <button id="explore" onclick="window.location.href='tpl_ourrooms.html';">
+            EXPLORE OUR ROOMS
+        </button>
+    </section>
+    
+    <footer>
+    <div>
+    <p>© 2023 Thatplacela. All rights reserved. <br>
+    123, Jalan Harmoni, Taman Ceria Heights, 58000 Kuala Megah, Selangor, Malaysia.
+    </p>
+        <a href="mailto:thatplacela@yahoo.com" style="text-decoration:none">
+            <img src="mail.png" style="margin-right: 40px;"/>
+        </a>
+        
+        <a href="tel: +60123456789" style="text-decoration:none" style="text-decoration:none">
+            <img src="phone.png" style="margin-right: 40px;"/>
+        </a>
+        <a href="https://www.instagram.com" style="text-decoration: none">
+            <img src="ig.png">
+        </a>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/*
+Additional CSS for tpl_aboutus.html
+By TAN JIN YUAN
+*/
+
+section.baselayout{ 
+    background-color: #c0d4de;
+    color: black;
+    font-size: 55px;
+    padding-bottom: 8%;
+    text-align: center;
+    background: url(bg2.png) no-repeat center ;
+}
+
+section#aboutus {
+    padding-top: 4%;
+    background-attachment: fixed
+}
+    
+article p{
+    padding: 3%;
+    font-size: 0.4em;
+    line-height: 1.3em;
+    color:white;
+}
+p.odd{text-align: left;}
+p.even{text-align: right;}
+
+/* Harold Styles ( quote from founder ) */
+div#harold {
+    background-color: rgba(228, 222, 187, 0.54);
+    font-size: 20px;
+    color:antiquewhite;
+    border-radius: 10px;
+    margin: 0px 30px;
+    padding: 10px 15px;
+    display: flex;
+    vertical-align: middle;
+    text-align: left;
+    align-items: center;
+    quotes:  '\201C''\201D';
+    
+}
+
+div#harold img{
+    border-radius: 10px;
+    float:left;
+    width: 17%;
+    height: auto;
+    margin: 15px;
+}
+div#harold > div {
+    padding:20px 0px;
+}
+
+blockquote::before{
+    content: open-quote;
+    font: normal normal bold 24px/1 sans-serif;
+}
+blockquote::after{
+    content: close-quote;
+    font: normal normal bold 24px/1 sans-serif;
+}
+
+@media only screen and (max-width: 700px ) {
+    div#harold > div {
+        font-size: 20px;
+    }
+
+    div#harold img{
+        width: 30%;
+
+    }
+    
+}

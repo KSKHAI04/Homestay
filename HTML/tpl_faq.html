@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="thatplace, Cheap, Malaysia, Homestay" />
+        <link href="tpl_reset.css" rel="stylesheet">
+        <link href="tpl_base.css" rel="stylesheet">
+        <link href="faq.css" rel="stylesheet">
+        <title>That place la....</title>
+        <script>
+            //JS Script by TAN JIN YUAN
+            
+            //Checks whether user is logged in
+            window.onload = function() {
+            var accLink = document.getElementById("login");
+
+            if(localStorage.getItem('InOrNot') !== null ){
+                accLink.setAttribute("href", "myaccount.html"); //Pressing my account redirects to account page
+            }
+            else{
+                accLink.setAttribute("href", "tpl_login.html");// pressing my account redirects to login page
+            }
+            }
+        </script>
+    </head>
+<body>
+    <header>
+        <div id="logo_index">
+            <a href="tpl_homepage.html"><img src="thatplacela_logo.png" alt="That place la..." title="That place laa.." height="180" ></a>
+            <nav>
+                <ul>
+                    <li><span><a href="tpl_faq.html" style="text-decoration:none">FAQ</a></span></li>
+                    <li><span><a href="tpl_aboutus.html" style="text-decoration:none">ABOUT US</a></span></li>
+                    <li><span><a href="tpl_ourrooms.html" style="text-decoration:none">OUR ROOMS</a></span></li>
+                    <li><span><a href="tpl_homepage.html" style="text-decoration:none">HOME</a></span></li>
+                    <li><a id="login" href="tpl_login.html" style="text-decoration:none">MY ACCOUNT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="baselayout">
+        <!--Chatbot-->
+        <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+        <div class="chat-popup" id="myChat">
+            <iframe width="350" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+            </iframe>
+        <button type="button" class="btncancel" onclick="closeForm()">&#9747;</button>
+        </div>
+        <script>
+            function openForm() {
+              document.getElementById("myChat").style.display = "block";
+            }
+            function closeForm() {
+                document.getElementById("myChat").style.display = "none";
+            }    
+        </script>
+        <!--End Chatbot-->
+        <div class="faq" id="intro">
+        <h1>FAQ</h1>
+            <p>At <em>thatplacela</em>, we understand that you may have questions about your upcoming stay with us. To make your experience as smooth and enjoyable as possible, we've put together this FAQ section to provide you with 
+                answers to some of the most common questions our guests ask.
+            </p>
+        </div>
+        <button class="accordion">Is there a minimum or maximum stay requirement?</button>
+        <div class="panel">
+            <p>You should stay for <b>at least 1 night</b>. But you may stay as long as you want, but do keep in mind of the charges!</p>
+        </div>
+
+
+        <button class="accordion">How do I book a homestay with Thatplacela?</button>
+        <div class="panel">
+            <p>Click/Tap on the <a href="tpl_ourrooms.html">"Our Rooms"</a> page to check our listings.</p>
+        </div>
+        <button class="accordion">What types of extra services do you offer?</button>
+        <div class="panel">
+          <p>Extra services include delivering keys to the homestay to our doorstep! (Choose "Door Key Delivery" on Checkout)</p>
+        </div>
+        <button class="accordion">Can I cancel or modify my reservation?</button>
+        <div class="panel">
+          <p>Unfortunately, reservation cancellation is <b>NOT ALLOWED</b> without a fee. <br/>Do refer to our cancellation policy for details. </p>
+        </div>
+
+        <button class="accordion">What payment methods do you accept?</button>
+        <div class="panel">
+          <p><b>Credit Cards</b> are accepted for each "thatplacela" booking. </p>
+        </div>
+
+        <button class="accordion">Do I need travel insurance for my homestay?</button>
+        <div class="panel">
+          <p>It is highly recommended that you purchase your insurance from your insurance advisor.</p>
+        </div>
+
+        <button class="accordion">What is TPL Membership?</button>
+        <div class="panel">
+          <p>TPL Membership is a membership programme for all "thatplacela" customers. The more you book, the more benefits you will enjoy!
+                <br/><br/>
+            Check out our homepage for membership details.
+          </p>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");   //Array of acc
+        var i;
+
+        for (i = 0; i < acc.length; i++) { //acc/length - total number of elements in the acc array
+        acc[i].addEventListener("click", function() {   //Detects for an action (click)
+            this.classList.toggle("active");        
+            var panel = this.nextElementSibling;   //Refers to div .panel
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;  // 0
+            } 
+            else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+        }
+        </script>
+    <footer>
+        <div>
+            <p>© 2023 Thatplacela. All rights reserved. <br>
+            123, Jalan Harmoni, Taman Ceria Heights, 58000 Kuala Megah, Selangor, Malaysia.
+            </p>
+                <a href="mailto:thatplacela@yahoo.com" style="text-decoration:none">
+                    <img src="mail.png" style="margin-right: 40px;"/>
+                </a>
+                
+                <a href="tel: +60123456789" style="text-decoration:none" style="text-decoration:none">
+                    <img src="phone.png" style="margin-right: 40px;"/>
+                </a>
+                <a href="https://www.instagram.com" style="text-decoration: none">
+                    <img src="ig.png">
+                </a>
+        </div>
+</footer>
+</body>
+</html>

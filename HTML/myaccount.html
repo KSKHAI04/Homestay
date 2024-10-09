@@ -1,0 +1,185 @@
+<!--TAN JIN YUAN-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="thatplace, Cheap, Malaysia, Homestay" />
+        <link href="tpl_base.css" rel="stylesheet"/>
+        <link href="myaccount.css" rel="stylesheet"/>
+        <title>That place la....</title>
+        <style type="text/css">
+            .baselayout{
+                background-image: url(bg.jpg);
+                background-repeat: no-repeat;
+                background-size: 1920px 1080px;
+                text-align: center;
+            }
+
+            #explore{
+                font-family: 'Montserrat', Verdana, sans-serif;
+                background-color: rgb(130, 198, 254);
+                font-size: 20px;
+                border: 0px;
+                border-radius: 3px ;
+                margin: 20px 0px;
+                padding: 15px 20px;
+                transition: 0.1s linear;
+            }
+
+            #explore:hover{
+                background-color: aliceblue;
+            }
+
+            #booking a:hover{
+                background-color: transparent;
+                color: whitesmoke;
+            }
+
+        </style>
+        <script type="text/javascript"> 
+            const mth = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var today = new Date();
+            
+            var day = today.getDate();
+            var month = mth[today.getMonth()] ;
+            var year = today.getFullYear();
+
+            var mthY =month + " " + year;
+
+            window.onload = function(){
+                if(localStorage.getItem('InOrNot') == null ){
+                    window.location.href = "tpl_login.html";
+                }
+                let tplcode = "12358000"
+                document.getElementById("code").innerHTML = tplcode;
+                document.getElementById("day").innerHTML = day; 
+                document.getElementById("mthY").innerHTML = mthY; 
+                
+                var mail = document.getElementById("email");
+                const name = document.getElementsByClassName("name");
+                
+                var localName = localStorage.getItem("Name");
+                var localMail = localStorage.getItem("Email");
+
+                for(var a = 0; a < name.length; a++){
+                    name[a].innerHTML = localName;
+                }
+                mail.innerHTML = localMail;
+                document.getElementById("profile").setAttribute('style','text-align:center')
+            }
+            function logout(){
+                if(confirm("Are you sure you would like to log out?")){
+                    localStorage.removeItem("InOrNot");
+                    window.location.href = "tpl_login.html";
+                }
+
+            }
+        </script>
+    </head>
+<body>
+    
+        <!--Chatbot-->
+        <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+        <div class="chat-popup" id="myChat">
+            <iframe width="350" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+            </iframe>
+        <button type="button" class="btncancel" onclick="closeForm()">&#9747;</button>
+        </div>
+        <script>
+            function openForm() {
+              document.getElementById("myChat").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myChat").style.display = "none";
+            }    
+        </script>
+        <!--End Chatbot-->
+    <header>
+        <div id="logo_index">
+            <a href="tpl_homepage.html"><img src="thatplacela_logo.png" alt="That place la..." title="That place laa.." height="180" ></a>
+            <nav>
+                <ul>
+                    <li><a href="tpl_faq.html" style="text-decoration:none">FAQ</a></li>
+                    <li><a href="tpl_aboutus.html" style="text-decoration:none">ABOUT US</a></li>
+                    <li><a href="tpl_ourrooms.html" style="text-decoration:none">OUR ROOMS</a></li>
+                    <li><a href="tpl_homepage.html" style="text-decoration:none">HOME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <!--Chatbot-->
+        <button class="botopen" onclick="openForm()">&#128488; Chat With Us</button>
+        <div class="chat-popup" id="myChat">
+            <iframe width="350" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/8bfca540-11c1-442c-a9cf-9687d178b857">
+            </iframe>
+        <button type="button" class="btncancel" onclick="closeForm()">&#9747;</button>
+        </div>
+        <script>
+            function openForm() {
+              document.getElementById("myChat").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myChat").style.display = "none";
+            }
+        </script>
+        <!--End Chatbot-->
+    <div class="account-page">
+        <div class="profile">
+            <div class="profile-detail" id="profile">
+                <img src="background 2.jpg">
+                <h2 class="name">loading...</h2>
+                <p id="email">loading..</p><br/>
+                <p>Today is:<br/><br/><br/>
+                    <span id="day"></span><br/>
+                    <span id="mthY"></span>
+                </p>
+                <div>
+                    <button class="logout" onclick="logout()">LOGOUT</button>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div id="acc" class="dtcontent"><!--ACCOUNT-->
+                <h2 id="head">Account</h2> 
+                <p>Name: <span class="name" style="font-weight: bold;">loading...</span></p>
+                <p>Your membership code is : <b id="code"></b><br/>
+                    <span style="font-size: 10px;">(use code on checkout for discount)</span>
+                </p>
+                
+            </div>
+            <div id="booking" class="dtcontent"><!--BOOK-->
+                <h2 id="head">BOOK A PLACE</h2> 
+                <ul class="navbar"  style="list-style-type: none; list-style-position: inside;">
+                    <li><a href="tpl_unit1.html">EMPIRE RESIDENCE 1<span class="arrow">></span></a></li>
+                    <li><a href="tpl_unit2.html">EMPIRE RESIDENCE 2<span class="arrow">></span></a></li>
+                    <li><a href="tpl_unit3.html">EMPIRE RESIDENCE 3<span class="arrow">></span></a></li>
+                    <li><a href="tpl_unit4.html">PLATINUM VICTORY 31<span class="arrow">></span></a></li>
+                    <li><a href="tpl_unit5.html">PLATINUM VICTORY 34<span class="arrow">></span></a></li>
+                    <li><a href="tpl_unit6.html">PLATINUM VICTORY 36<span class="arrow">></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </section>
+    <footer>
+    <div>
+    <p>© 2023 Thatplacela. All rights reserved. <br>
+    123, Jalan Harmoni, Taman Ceria Heights, 58000 Kuala Megah, Selangor, Malaysia.
+    </p>
+        <a href="mailto:thatplacela@yahoo.com" style="text-decoration:none">
+            <img src="mail.png" style="margin-right: 40px;"/>
+        </a>
+        
+        <a href="tel: +60123456789" style="text-decoration:none" style="text-decoration:none">
+            <img src="phone.png" style="margin-right: 40px;"/>
+        </a>
+        <a href="https://www.instagram.com" style="text-decoration: none">
+            <img src="ig.png">
+        </a>
+    </div>
+</footer>
+</body>
+</html>

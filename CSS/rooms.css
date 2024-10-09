@@ -1,0 +1,97 @@
+/* Listing selection styles (Our rooms) */
+
+
+
+  
+  div.container {
+    background-color: #f1f1f1;
+    font: normal normal 0.3em/1.5em 
+    'Montserrat', Verdana;
+    margin: 20px auto;
+    height: 40vh;
+    width: 90%;
+    line-height: 25px;
+    display: flex;
+    box-shadow: rgb(51, 51, 51) 5px 0px 15px, rgb(51, 51, 51) -5px 0px 10px;
+
+  }
+
+  .desc h2{
+    font-size: 30px;
+  }
+
+
+  .desc {
+    flex: 1.5 1 300px ;
+    padding: 10px 10px 10px 20px;
+    justify-items: center;
+  }
+
+  /* Selecting a room description*/
+  .desc a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s linear;
+  }
+  .desc a:hover {
+    text-decoration: none;
+    color:rgb(43, 144, 226);
+  }
+  .desc a:active {
+    text-decoration: none;
+    color:rgb(162, 147, 13);
+  }
+
+  .image{
+    flex: 1 0.1 100px ;
+    float: left;
+    display: flex;
+    justify-content:center;
+    overflow:hidden;
+    align-items: center;
+    height: 100%;
+  }
+
+  .image img {
+    min-height: 100%;
+    min-width: 100%;
+    flex-shrink: 1;
+  }
+
+
+  section{
+    background:url('bg1.png') no-repeat fixed;
+    background-size: cover;
+
+    
+  }
+
+  /* Book Now button*/
+  a.btn{
+    background-color: white;
+    border: 1.5px solid black;
+    padding: 0.8em 1.5em;
+    margin: 13px 5px;
+    text-decoration: none;
+    transition: 0.3s linear;
+    color: black;
+    font-size: 15px;
+    display:inline-block;
+    text-align: center;
+    line-height: 130%;
+   
+
+  }
+
+  a.btn:hover{
+    color:rgb(43, 144, 226);
+    background-color: black;
+  }
+
+  div.btn{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    -ms-flex-direction: row;
+  }

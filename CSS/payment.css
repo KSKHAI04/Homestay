@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Montserrat'; 
+    src: url(../Montserrat-VariableFont_wght.ttf) format(truetype);}
+
+*{
+    font-family: 'Montserrat',sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.pymt h3{
+    color: white;
+    font-weight: 400;
+}
+
+
+.container{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: transparent;
+    padding-bottom: 70px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.container form{
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.col{
+    flex: 1 1 250px;
+}
+
+h3{
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.inputbox{
+    margin: 15px 0;
+}
+
+.inputbox span{
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: block;
+}
+
+.inputbox input{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.inputbox input:focus{
+    border: 1px solid #000;
+}
+
+.flex{
+    display: flex;
+    gap: 10px;
+}
+
+.flex .inputbox{
+    margin-top: 5px;
+}
+
+.inputbox img{
+    height: 34px;
+    margin-top: 1px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+h1#yourbooking{
+    display: none;
+}
+
+@media print{
+    *{
+        color: black;
+    }
+
+   footer, div#button, p.checkbox, h1#readybook{
+        display: none;
+
+    }
+
+    td{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h1#yourbooking, div.billingaddress {
+        color: black;
+        display: block;
+    }
+
+    section.pymt *:not(div.billingaddress){
+        display: none;
+    }
+
+    @page {   
+    size: 8.5in 11in;   /*Letter sizing*/
+       margin: 0.5in;
+    }
+
+}

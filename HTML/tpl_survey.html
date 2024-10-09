@@ -1,0 +1,97 @@
+<!--KHOO SOON KHAI-->
+<html lang="en">
+    <head>       
+         <link href="tpl_base.css" rel="stylesheet">
+         <link href="survey.css" rel="stylesheet">
+        <title>TPL CUSTOMER SURVEY</title>
+    </head>
+    <body>
+        <div class="content">
+        <section>
+        <h1 style="line-height: normal;"> <img src="thatplacela_logo.png" width="30%"><br/>
+            CUSTOMER SURVEY
+        </h1>
+        <p class="decription">Thank You For Spending Time To Fill In This survey</p>
+        <form id="form" method="get" action="tpl_TQPages Survey.html"> 
+            <div class="input">
+            <label id="label-Name" for="name">
+                Name:
+                <input type="text" placeholder="NAME" id="name" name="custName" required/>
+            </label>
+        </div>
+        <br/>
+            <div class="input">
+                <label id="label-email" for="email">Email:</label>
+                    <input type="email" placeholder="EMAIL" id="email" name="email" required/>
+                
+            </div>
+            <br/>
+            <div class="input">
+                <label id="label-age" for="age">Age:</label>
+                <input type="number" placeholder="AGE" id="age" name="age" min="18" max="100"required/>
+            </div>
+            <div class="services">
+            <p>How Was The Services</p>
+              <input type="radio" id="label-VeryExcellent" name="services" value="veryEx">
+              <label for="label-VeryExcellent" id="label-services">Very Excellent</label><br> 
+              <input type="radio" id="label-Excellent" name="services" value="Ex">
+              <label for="label-Excellent" id="label-services">Excellent</label><br>
+              <input type="radio" id="label-Verygood" name="services" value="veryG">
+              <label for="label-Verygood" id="label-services">Very Good</label><br>
+              <input type="radio" id="label-Good" name="services" value="Good">
+              <label for="label-Good" id="label-services">Good</label><br>
+              <input type="radio" id="label-Bad" name="services" value="bad">
+              <label for="label-Bad" id="label-services">Bad</label><br>
+        </div>
+        <div class="recommend">
+            <p>Would You Recommend our homestay to your friends</p>
+            <input type="radio" id="label-recommendYes" name="recommend" value="recommend">
+            <label for="label-recommendYes" id="label-recommend">YES</label>
+            <input type="radio" id="label-recommendNo" name="recommend" value="not_recommend">
+            <label for="label-recommendNo"id="label-recommend">NO</label>
+        </div>
+        <div class="place">
+            <p>How Did You Know This Place</p>
+            <input type="radio" id="label-place-Internet" name="src" value="internet">
+            <label for="label-place-Internet" id="label-place">INTERNET</label>
+            <input type="radio" id="label-place-Instagram" name="src" value="INSTAGRAM">
+            <label for="label-place-Instagram" id="label-place">INSTAGRAM</label>
+            <input type="radio" id="label-place-Facebook" name="src" value="FACEBOOK">
+            <label for="label-place-Facebook" id="label-place">FACEBOOK</label>
+            <input type="radio" id="label-place-Friend" name="src" value="friend">
+            <label for="label-place-Friend" id="label-place">FRIENDS</label>
+        </div>
+        <div class="input">
+            <p>How easy is for you too book through our online system</p>
+              <input type="radio" id="label-Veryeasy" name="difficulty" value="veryEasy">
+              <label for="label-Veryeasy" id="label-book">Very Easy</label>
+              <input type="radio" id="label-Easy" name="difficulty" value="Easy">
+              <label for="label-Easy" id="label-book">Easy</label>
+              <input type="radio" id="label-average" name="difficulty" value="Average">
+              <label for="label-average" id="label-book">Average</label>
+              <input type="radio" id="label-hard" name="difficulty" value="Hard">
+              <label for="label-hard" id="label-book">Hard</label>
+              <input type="radio" id="label-veryhard" name="difficulty" value="VeryHard">
+              <label for="label-veryhard" id="label-book">Very Hard</label>
+        <p>Do you have any other opinions</p>
+            <div class="input">
+                <label id="label-opinion" for="opinion">
+                    <textarea name="opinion" rows="5" cols="40" ></textarea>
+                </label>
+            </div>
+            <div  class="notice">
+            <p>Would you like to receive offers through email?</p>
+            <input type="radio" id="label-Yes" name="noticfication" value="Yes">
+              <label for="label-Yes" id="label-book">YES</label>
+              <input type="radio" id="label-No" name="noticfication" value="No">
+              <label for="label-No" id="label-book">NO</label>
+            </div>
+            <div class="btn">
+            <input type="submit" id="survey" value="Submit Survey"/>
+            <input type="submit" id="survey" value="Reset"/>
+            </div>
+        </form>
+    </section>
+    </div>
+    </body>
+</html>
